@@ -6,13 +6,13 @@ import colors from '../styles/theme'
 import GlobalStyle from '../styles/globalStyles'
 
 import {Login} from './login'
-
+import {Menu} from './menu'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme = {colors}>
       <GlobalStyle />
-      <Login />
+      <Menu />
     </ThemeProvider>
   </React.StrictMode>,
 )

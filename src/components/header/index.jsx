@@ -1,9 +1,12 @@
 import {Container} from './style'
+import imgLogo from '../../assets/photo1697480913-removebg-preview 1.png'
 
-export const Header = () => {
+import { ButtonText } from '../buttonText'
+export function Header () {
     return (
         <Container>
-            <h1>ola</h1>
+            <img src={imgLogo} alt="" />
+            <ButtonText title="HOME"/>
         </Container>
     )
 }

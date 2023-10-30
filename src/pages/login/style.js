@@ -19,7 +19,7 @@ export const Content = styled.div`
 
 export const Form = styled.form`
     width: 40%;
-    padding: 7rem 3rem;
+    padding: 5rem 3rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
