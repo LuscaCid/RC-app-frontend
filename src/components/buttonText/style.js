@@ -6,5 +6,7 @@ export const Container = styled.button`
     color: ${({theme}) => theme.colors.buttonTextBg};
     text-decoration: underline;
     cursor: pointer;
-    
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    color: ${({theme, isActive}) => isActive? theme.colors.buttonTextBg : "#fff"};
 `

@@ -10,7 +10,19 @@ export const Container = styled.header`
     justify-content: space-between;
     align-items: center;
     color: white;
-    >img{
-        width: 13rem;
+    >div{
+        display: flex;
+        gap: 5rem;
+        >img{
+            width: 13rem;
+        }
     }
+    #first-div {
+        >img{
+            
+        }
+    }
+    
+    
+        
 `

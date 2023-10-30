@@ -5,7 +5,9 @@ export const Container = styled.div`
     margin-bottom: 2rem;
     position: relative;
     border-radius: 0.6rem;
+    width: 100%;
     >input{
+        font-size: 1.6rem;
         width: 100%;
         padding: 1.2rem 3.4rem;
         border-radius: 0.6rem;
@@ -15,6 +17,6 @@ export const Container = styled.div`
     >svg{
         position: absolute;
         left: 1rem;
-        top: .7rem
+        top: .9rem
     }
 `

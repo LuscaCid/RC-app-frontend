@@ -5,12 +5,12 @@ export const Container = styled.div`
     height: 100vh;
     
     background: ${({theme}) => theme.colors.loginBg};
-    padding: 10rem;
+    padding: 20rem 0;
 
 `
 
 export const Content = styled.div`
-    width: 94rem;
+    width: min(104rem, 93%);
     background: ${({theme}) => theme.colors.loginBgForm};
     margin: auto;
     border-radius: 0.7rem;
@@ -24,15 +24,18 @@ export const Form = styled.form`
     flex-direction: column;
     gap: 1rem;
     >h1{
+        margin-bottom: 2rem;
+        border-bottom: 1px solid black;
+        padding-bottom: 1rem;
         font-weight: 700;
-        font-size: 3.2rem;
+        font-size: 4.2rem;
     }
     >label{
         font-weight: 700;
-        font-size: 1.5rem;
+        font-size: 2.1rem;
     }
     >a{
-        font-size: 1.4rem;
+        font-size: 1.7rem;
         color: #000;
 
     }
@@ -40,7 +43,7 @@ export const Form = styled.form`
 
 export const StyledSide = styled.div`
     padding: 3rem;
-    width: 100%;
+    width: 80%;
     border-radius:  0 .5rem .5rem 0;
     background: linear-gradient(130deg ,rgb(0,0,0, 0.7), #E1AA1F);
     color: white;
@@ -49,16 +52,16 @@ export const StyledSide = styled.div`
         justify-content: space-between;
         display: flex;
         .texts{
-            height: 35rem;
+            height: 19rem;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             h1{
-            font-size: 3.6rem;
+            font-size: 5.6rem;
             }
             >p{ 
                 
-                font-size: 1.8rem;
+                font-size: 2.1rem;
             }
             
 
