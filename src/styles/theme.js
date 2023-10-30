@@ -11,6 +11,7 @@ export default {
 
         "buttonTextBg" : "#E1AA1F",
 
+        
         "wordBg" : "#FAD825"
     }
 
