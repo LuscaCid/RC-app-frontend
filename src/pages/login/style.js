@@ -5,7 +5,7 @@ export const Container = styled.div`
     height: 100vh;
     
     background: ${({theme}) => theme.colors.loginBg};
-    padding: 20rem 0;
+    padding: 6rem 0;
 
 `
 
