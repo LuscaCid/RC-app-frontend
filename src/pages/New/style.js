@@ -8,18 +8,46 @@ export const Container = styled.div`
 
 export const Form = styled.form`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 1.5rem;
-    width: min(80rem, 90%);
+    width: min(120rem, 90%);
     background: ${({theme}) => theme.colors.loginBgForm};
-    padding: 4rem 2rem;
-    margin: auto;
+    padding: 6rem 4rem;
+    margin: 2rem auto;
     border-radius: .8rem;
-    
+    >h1 {
+        font-size: 3.6rem;
+        margin-bottom: 1.2rem;
+        padding: 0 0 2rem;
+        border-bottom: 1px solid black;
+    }
+    >.flex {
+        gap: 2rem;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
     label{
         width: fit-content;
-        font-size: 1.5rem;
+        font-size: 2.1rem;
         font-weight: 700;
+    }
+    section{
+        width: 100%;
+    }
+    .two-inputs{
+        display: flex;
+        flex-direction: row;
+
+    }
+    footer{
+        width: 100%;
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+    footer + footer {
+        margin-left: 2rem;
     }
     
 `

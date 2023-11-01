@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme = {colors}>
       <GlobalStyle />
-      <New />
+      <New user = "Lucas" />
     </ThemeProvider>
   </React.StrictMode>,
 )
