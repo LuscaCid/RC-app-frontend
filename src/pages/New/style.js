@@ -4,7 +4,7 @@ export const Container = styled.div`
     height: 100vh;
     width: 100%;
     display: grid;
-    grid-template-rows: 9rem auto;
+    grid-template-rows: 11rem auto;
     grid-template-areas: 
     "Header"
     "content";

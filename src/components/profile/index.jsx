@@ -1,10 +1,15 @@
+import { Link } from "react-router-dom";
 import { Container } from "./style";
-
-export const Profile = ({src, username}) => {
+import {FiPower} from 'react-icons/fi'
+export const Profile = ({ srcImg, username}) => {
     return (
-        <Container>
-            <img src={src} alt="imagem do usuário" />
+        <Container to="/profile">
+              <Link>
+            <FiPower size={40} color="white"/>
+            </Link>
+            <img src={srcImg} alt="imagem do usuário" />
             <span>{username}</span>
+          
         </Container>
 
     )
