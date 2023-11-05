@@ -19,9 +19,9 @@ Eu sou uma pessoa desenvolvedora full-stack que tem como objetivo continuar evol
 
 ## Stack utilizada
 
-**Front-end:** React, javascript, styled-components 
+**Front-end:** React, javascript, styled-components, axios
 
-**Back-end:** Node, Express, Knex
+**Back-end:** Node, Express, Knex, cors
 
 
 ## Aprendizados

@@ -1,10 +1,12 @@
 import { Container } from "./style";
-
-export const Profile = ({src, username}) => {
+import { useAuth } from "../../hooks/auth";
+export const Profile = () => {
+    const {user} = useAuth()
+    console.log(user)
     return (
         <Container>
-            <img src={src} alt="imagem do usuário" />
-            <span>{username}</span>
+            <img src={`https://github.com/${user}.png`} alt="imagem do usuário" />
+            <span>{user}</span>
         </Container>
 
     )

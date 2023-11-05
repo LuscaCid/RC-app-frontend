@@ -10,8 +10,8 @@ export const New = ({user, ...rest}) => {
     return (
         <Container>
             <Header 
-            src ="https://github.com/luscacid.png" 
-            username = "lucas cid"
+            src = {`https://github.com/${user}.png` }
+            username = {user}
             />
             <Form {...rest}>
                 <h1>CADASTRO DE O.S. PARA: {user}</h1>

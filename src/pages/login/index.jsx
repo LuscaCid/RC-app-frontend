@@ -5,11 +5,13 @@ import { Button } from '../../components/button'
 import {FiUser} from 'react-icons/fi'
 import {FiLock} from 'react-icons/fi'
 import logoImg from '../../assets/photo1697480913-removebg-preview 1.png'
-
+import { Link } from 'react-router-dom'
 export const Login = ()=>{
     return (
-        <Container>
-            <Content>
+        <main>
+
+             <Container>
+                <Content>
                 <Form>
                     <h1>Faça login</h1>
 
@@ -27,7 +29,7 @@ export const Login = ()=>{
                     id="password"
                     type="password"
                     />
-                    <a href="/">Esqueci a senha</a>
+                    <Link to={'/register'}>Criar conta</Link>
                     <Button 
                     title="Fazer"
                     span = "login"
@@ -50,5 +52,7 @@ export const Login = ()=>{
             </Content>
             
         </Container>
+        </main>
+       
     )
 }
