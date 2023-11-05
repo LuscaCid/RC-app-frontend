@@ -6,6 +6,7 @@ export const Container = styled.div`
     height: 100vh;
     
     background: ${({theme}) => theme.colors.loginBg};
+
     display: flex;
     align-items: center;
 

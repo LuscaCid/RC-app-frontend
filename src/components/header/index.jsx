@@ -6,20 +6,25 @@ import { Profile } from '../profile'
 //import { } from 'react-icons/fi'
 import {useAuth} from '../../hooks/auth'
 
+
+//import { } from 'react-icons/fi'
+
 export function Header () {
-    const {data} = useAuth()
-    console.log(data)
+    const {user} = useAuth()
+    console.log(user)
     return (
         <Container  >
             
             <div id='first-div'>
                 <img src={imgLogo} alt="logo da empresa" />
-                <ButtonText title="HOME" isActive/>
-                <ButtonText title="CLIENTE"/>
-                <ButtonText title="ESTOQUE" isActive/>
+                <ButtonText src="/" title="Home" isActive/>
+                <ButtonText src= "new" title="Buscar cliente"/>
+                <ButtonText title="Estoque" isActive/>
+                <ButtonText title="Cadastrar cliente" />
             </div>
             <div>
                 <Profile /> 
+                <Profile srcImg ={`https://github.com/${user}`} username={user}/> 
             </div>    
                 
                

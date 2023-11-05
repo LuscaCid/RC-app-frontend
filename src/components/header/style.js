@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.header`
     width: 100%;
     padding: 0 2rem;
-    height: 9rem;
+    
     background: ${({theme}) => theme.colors.background_900};
     display: flex;
     flex-direction: row;
@@ -12,17 +12,13 @@ export const Container = styled.header`
     color: white;
     >div{
         display: flex;
-        gap: 5rem;
+        
         >img{
             width: 13rem;
+            margin-right: 4rem;
         }
     }
-    #first-div {
-        >img{
-            
-        }
-    }
-    
+
     
         
 `
