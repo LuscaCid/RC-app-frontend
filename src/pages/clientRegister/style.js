@@ -39,6 +39,6 @@ export const Form = styled.form`
 `
 export const MainContent = styled.div`
     border-radius: 0.7rem;
-    width: 60%;
+    width: min(90rem, 90%);
     margin: 3rem auto;
 `

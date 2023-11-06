@@ -6,7 +6,7 @@ export const SideNav = () => {
     return (
         <Container>
             
-            <ButtonText title = "Buscar cliente" src= "new" />
+            <ButtonText title = "Buscar cliente" src= "/search" />
             <ButtonText title = "Cadastrar cliente" src='/clientregister'/>
             <ButtonText title = "Estoque" />
             <ButtonText title = "Relatórios" />
