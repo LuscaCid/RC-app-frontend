@@ -4,6 +4,8 @@ export const Container = styled.div`
 
     >input {
         background: url(FiCamera);
+        display: none;
+        
     }
 
     display: flex;

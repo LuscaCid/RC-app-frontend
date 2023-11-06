@@ -15,8 +15,8 @@ function AuthProvider({children}){
       const { user, token } = res.data
       api.defaults.headers.authorization = `Bearer ${token}`
       console.log(user)
-      localStorage.setItem('@Robercapas:user', JSON.stringify(user))
-      localStorage.setItem('@Robercapas:token', token)
+      localStorage.setItem('@Robertcapas:user', JSON.stringify(user))
+      localStorage.setItem('@Robertcapas:token', token)
       
       setData({user , token})
       
@@ -27,15 +27,16 @@ function AuthProvider({children}){
   }
   
   function signOut(){
-    localStorage.removeItem('@Robercapas:user')
-    localStorage.removeItem('@Robercapas:token')
+    localStorage.removeItem('@Robertcapas:user')
+    localStorage.removeItem('@Robertcapas:token')
     setData({})
   }
   
   useEffect(()=>{
-    const token = localStorage.getItem('@Robertcapas:user') 
-    const user =  localStorage.getItem('@Robertcapas:token')
+    const user = localStorage.getItem('@Robertcapas:user') 
+    const token =  localStorage.getItem('@Robertcapas:token')
     if(token && user) {
+      console.log(token, user, 'tem')
       setData({
         user : JSON.parse(user),
         token

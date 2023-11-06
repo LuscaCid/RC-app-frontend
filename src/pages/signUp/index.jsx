@@ -25,11 +25,11 @@ export const SignUp = ()=>{
         
         api.post('/register', {name, email, password })
         .then(()=> {
-            alert('cadastrou o user')
+            alert('Usuário cadastrado com sucesso')
             navigate('/')
         })
         .catch(error => {
-            if(error.response)alert(error.response.data.message)
+            if(error.response)alert(error.message)
             else alert('não foi possivel cadastrar')
         })   
     }  

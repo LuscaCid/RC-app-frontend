@@ -8,7 +8,7 @@ import { LogoutButton } from "../../components/logoutButton";
 import { useAuth } from "../../hooks/auth";
 
 export const Profile = () => {
-    const {user, name} = useAuth()
+    const {user} = useAuth()
     return (
         <Container>
             <header>
@@ -21,7 +21,7 @@ export const Profile = () => {
                 </Link>
             </header>
                 <div className="img">
-                    <img src={`https://github.com/${user}.png`} alt="" />
+                    <img src={`https://github.com/${user.name}.png`} alt="" />
                 </div>
                 <input type="file"  />
             
