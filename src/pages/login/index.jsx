@@ -7,9 +7,19 @@ import {FiLock} from 'react-icons/fi'
 import logoImg from '../../assets/photo1697480913-removebg-preview 1.png'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../../hooks/auth'
+import { useState } from 'react'
+
 export const Login = ()=>{
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
+
+
     const {user, signIn} = useAuth()
-    
+    function handleSignIn(e){
+        e.preventDefault()
+        
+        signIn({username, password})
+    }
     return (
         <main>
 
@@ -20,6 +30,7 @@ export const Login = ()=>{
 
                     <label htmlFor="user">Nome de usuário</label>
                     <Input 
+                    onChange = {(e)=> {setUsername( e.target.value)}}
                     icon= {FiUser} 
                     placeholder= 'Usuário' id="user" 
                     type="text"
@@ -27,6 +38,7 @@ export const Login = ()=>{
 
                     <label htmlFor="password">Senha</label>
                     <Input 
+                    onChange = {(e)=> {setPassword( e.target.value)}}
                     icon= {FiLock} 
                     placeholder= 'Senha'  
                     id="password"
@@ -34,6 +46,7 @@ export const Login = ()=>{
                     />
                     <Link to={'/register'}>Criar conta</Link>
                     <Button 
+                    functions={handleSignIn}
                     title="Fazer"
                     span = "login"
                     />

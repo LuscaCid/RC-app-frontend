@@ -5,27 +5,21 @@ const AuthContext = createContext({})
 function AuthProvider({children}){
   
   const [data , setData] = useState({})
-  async function otherTest(){
-    const response = await api.get('/test')
-    console.log(response.data)
-    setData(response.data)
-  }
  
-
   async function signIn({username, password}){
     
-
     try{
-      const res = await api.post('/sessions', {username, password})
+      
+      const res = await api.post('/sessions', {username , password })
 
       const { user, token } = res.data
       api.defaults.headers.authorization = `Bearer ${token}`
-
+      console.log(user)
       localStorage.setItem('@Robercapas:user', JSON.stringify(user))
       localStorage.setItem('@Robercapas:token', token)
       
-      setData(user , token)
-
+      setData({user , token})
+      
     } catch (error) {
       if(error.response) alert(error.response.data.message)
       else alert('não foi possivel fazer login')
@@ -43,8 +37,8 @@ function AuthProvider({children}){
     const user =  localStorage.getItem('@Robertcapas:token')
     if(token && user) {
       setData({
-        token,
-        user : JSON.parse(user)
+        user : JSON.parse(user),
+        token
       })
     }
 
@@ -53,10 +47,8 @@ function AuthProvider({children}){
 
   return (
     <AuthContext.Provider value = {{
-      otherTest,
       signOut, 
       signIn,
-      name : data.name,
       user : data.user}}>
       {children}
     </AuthContext.Provider>
