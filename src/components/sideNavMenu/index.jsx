@@ -1,6 +1,8 @@
 import { Container } from "./style";
 import { ButtonText } from "../buttonText";
-export const SideNav = (props) => {
+import {useAuth} from '../../hooks/auth'
+export const SideNav = () => {
+    const {test, otherTest } = useAuth()
     return (
         <Container>
             
@@ -8,8 +10,8 @@ export const SideNav = (props) => {
             <ButtonText title = "Cadastrar cliente" src='/clientregister'/>
             <ButtonText title = "Estoque" />
             <ButtonText title = "Relatórios" />
-            <ButtonText title = "Fila de espera" />
-            <ButtonText title = "Histórico de OS" />
+            <ButtonText title = "Fila de espera" functions = {otherTest}/>
+            <ButtonText title = "Histórico de OS" functions= {test}/>
         </Container>
 
     )

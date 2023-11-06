@@ -5,13 +5,29 @@ import { Button } from '../../components/button'
 import {FiUser, FiLock, FiMail} from 'react-icons/fi'
 
 import logoImg from '../../assets/photo1697480913-removebg-preview 1.png'
-
+import { api } from '../../services/api'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import { useAuth } from '../../hooks/auth'
+
 export const SignUp = ()=>{
+
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+
+    async function signUp(){
+        console.log('entrou no signup')
+        if(!email || !name || !password)return alert('Preencha todos os campos!')
+        try{
+            const res = await api.post('/register', {name, email, password })
+            alert(res.response)
+        } catch (error) {
+            if(error.response)alert(error.response.data.message)
+            else alert('não foi possivel cadastrar')
+        }
+        
+    }  
 
     return (
         <Container>
@@ -60,6 +76,7 @@ export const SignUp = ()=>{
                     />
                     <Link to='/'>Voltar para o login</Link>
                     <Button 
+                    onClick = {signUp}
                     title="cadastrar"
                     span = "conta"
                     />

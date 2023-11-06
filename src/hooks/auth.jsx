@@ -4,12 +4,14 @@ const AuthContext = createContext({})
 
 function AuthProvider({children}){
   
-  const [data , setData] = useState({
-    user :  "luscacid",
-    name : 'Lucas Cid'
-    
-  })
-  
+  const [data , setData] = useState({})
+  async function otherTest(){
+    const response = await api.get('/test')
+    console.log(response.data)
+    setData(response.data)
+  }
+ 
+
   async function signIn({username, password}){
     
 
@@ -51,6 +53,7 @@ function AuthProvider({children}){
 
   return (
     <AuthContext.Provider value = {{
+      otherTest,
       signOut, 
       signIn,
       name : data.name,

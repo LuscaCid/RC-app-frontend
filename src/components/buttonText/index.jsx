@@ -1,8 +1,10 @@
 import { Container } from "./style";
-
-export function ButtonText({src, title, isActive}) {
+import { useAuth } from "../../hooks/auth";
+export function ButtonText({functions, src, title, isActive}) {
+    
     return (
-        <Container 
+        <Container
+        onClick={functions}
         to={src}
         isActive = {isActive}>
             {title}
