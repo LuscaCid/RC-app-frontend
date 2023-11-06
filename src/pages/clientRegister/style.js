@@ -40,5 +40,5 @@ export const Form = styled.form`
 export const MainContent = styled.div`
     border-radius: 0.7rem;
     width: 60%;
-    margin: 1rem auto;
+    margin: 3rem auto;
 `

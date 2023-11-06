@@ -42,11 +42,11 @@ export const New = ({user, ...rest}) => {
                         icon={BsFillCalendar2DateFill}
                         />
 
-                        <label htmlFor="model">Modelo do celular</label>
+                        <label htmlFor="entry">Data de entrada:</label>
                         <Input 
-                        placeholder="Modelo" 
-                        id="model" 
-                        icon={FiSmartphone}
+                        type='date'
+                        id="entry" 
+                        icon={BsFillCalendar2DateFill}
                         />
 
                     </section>
@@ -55,7 +55,7 @@ export const New = ({user, ...rest}) => {
                 
                 <div className="two-inputs">
                     <footer>
-                    <label htmlFor="">Observações sobre o aparelho</label>
+                    <label htmlFor="obs">Observações sobre o aparelho</label>
                         <Textarea
                         id = "obs" 
                         placeholder="Insira aqui as observações..."
@@ -63,7 +63,7 @@ export const New = ({user, ...rest}) => {
                     </footer>
                     
                     <footer>
-                    <label htmlFor="">Problema relatado:</label>
+                    <label htmlFor="problem">Problema relatado:</label>
                     <Textarea 
                     id ="problem"
                     placeholder="Problema relatado..."
@@ -71,7 +71,7 @@ export const New = ({user, ...rest}) => {
                     </footer>
                         
                 </div>   
-                <label htmlFor="">Informações sobre garantia:</label>
+                <label htmlFor="info">Informações sobre garantia:</label>
                     <Textarea 
                     id = "info"
                     placeholder="Insira aqui as informações"

@@ -26,6 +26,7 @@ export const Form = styled.form`
     margin: 0 auto;
     border-radius: .7rem .7rem 0 0 ;
     >h1 {
+        font-weight: 800;
         font-size: 3.6rem;
         margin-bottom: 1.2rem;
         padding: 0 0 2rem;
@@ -63,6 +64,6 @@ export const Form = styled.form`
 `
 
 export const MainContent = styled.div`
-    width: min(120rem, 90%);
+    width: min(90rem, 90%);
     margin: 3rem auto;
 `
