@@ -6,7 +6,10 @@ import {FiUser} from 'react-icons/fi'
 import {FiLock} from 'react-icons/fi'
 import logoImg from '../../assets/photo1697480913-removebg-preview 1.png'
 import { Link } from 'react-router-dom'
+import { useAuth } from '../../hooks/auth'
 export const Login = ()=>{
+    const {user, signIn} = useAuth()
+    
     return (
         <main>
 
@@ -43,7 +46,7 @@ export const Login = ()=>{
                             </p>
                         </div>
                         <div className="img">
-                        <img src={logoImg} alt="logo rober capas" />
+                        <img src={logoImg} alt="logo robert capas" />
                         </div>
                             
                     </div>

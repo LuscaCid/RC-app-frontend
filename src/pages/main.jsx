@@ -12,10 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <GlobalStyle />
       <AuthProvider>
         <Routes />
-        
       </AuthProvider>  
-    
-      
     </ThemeProvider>
   </React.StrictMode>,
 )

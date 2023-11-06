@@ -13,7 +13,7 @@ export const Container = styled(Link)`
         font-weight: 700;
     }
     >img {
-        margin-right: 5rem;
+        margin-right: 3rem;
         width: 6rem;
         height: 6rem;
         border-radius: 50%;

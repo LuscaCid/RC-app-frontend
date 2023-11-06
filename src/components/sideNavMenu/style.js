@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    height:calc(100vh - 9rem);
+    height: calc(100vh - 11.2rem);
     background:  ${({theme}) => theme.colors.background_900};
     border-top: 1px solid gray;
     width: fit-content;
@@ -10,5 +10,5 @@ export const Container = styled.div`
     flex-direction: column;
     gap: 3rem;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 `

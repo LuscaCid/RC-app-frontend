@@ -4,9 +4,10 @@ const AuthContext = createContext({})
 
 function AuthProvider({children}){
   
-  const [data , setData] = useState({user : 'lucas'})
+  const [data , setData] = useState({user : "lucas"})
+  
   async function signIn({username, password}){
-
+    
 
     try{
       const res = await api.post('/sessions', {username, password})
@@ -34,7 +35,12 @@ function AuthProvider({children}){
   useEffect(()=>{
     const token = localStorage.getItem('@Robertcapas:user') 
     const user =  localStorage.getItem('@Robertcapas:token')
-    setData({token, user})
+    if(token && user) {
+      setData({
+        token,
+        user : JSON.parse(user)
+      })
+    }
 
   }, [])
 

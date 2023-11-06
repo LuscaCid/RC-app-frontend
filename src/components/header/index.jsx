@@ -5,26 +5,26 @@ import { ButtonText } from '../buttonText'
 import { Profile } from '../profile'
 //import { } from 'react-icons/fi'
 import {useAuth} from '../../hooks/auth'
-
+import { Link } from 'react-router-dom'
+import {LogoutButton } from '../logoutButton'
 
 //import { } from 'react-icons/fi'
 
 export function Header () {
-    const {user} = useAuth()
-    console.log(user)
+    const {user, signOut} = useAuth()
+    
     return (
         <Container  >
             
             <div id='first-div'>
-                <img src={imgLogo} alt="logo da empresa" />
-                <ButtonText src="/" title="Home" isActive/>
-                <ButtonText src= "new" title="Buscar cliente"/>
-                <ButtonText title="Estoque" isActive/>
-                <ButtonText title="Cadastrar cliente" />
+            
+            <img src={imgLogo} alt="logo da empresa" />
+                
             </div>
             <div>
-                <Profile /> 
-                <Profile srcImg ={`https://github.com/${user}`} username={user}/> 
+                
+            <Profile /> 
+            <LogoutButton /> 
             </div>    
                 
                

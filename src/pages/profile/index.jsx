@@ -4,6 +4,7 @@ import {FiArrowLeft, FiLock, FiMail, FiUser} from 'react-icons/fi'
 import {FiPower} from 'react-icons/fi'
 import { Link } from "react-router-dom";
 import { Button } from '../../components/button'
+import { LogoutButton } from "../../components/logoutButton";
 export const Profile = () => {
     return (
         <Container>
@@ -12,7 +13,8 @@ export const Profile = () => {
                     <FiArrowLeft size={40} color="white"/>
                 </Link>
                 <Link to='/'>
-                    <FiPower size={40} color="white" />
+                    <LogoutButton /> 
+                
                 </Link>
             </header>
                 <div className="img">
