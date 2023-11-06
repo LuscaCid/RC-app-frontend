@@ -4,7 +4,11 @@ const AuthContext = createContext({})
 
 function AuthProvider({children}){
   
-  const [data , setData] = useState({user : "lucas"})
+  const [data , setData] = useState({
+    user :  "luscacid",
+    name : 'Lucas Cid'
+    
+  })
   
   async function signIn({username, password}){
     
@@ -49,6 +53,7 @@ function AuthProvider({children}){
     <AuthContext.Provider value = {{
       signOut, 
       signIn,
+      name : data.name,
       user : data.user}}>
       {children}
     </AuthContext.Provider>

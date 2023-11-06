@@ -4,7 +4,7 @@ export const Container = styled.div`
     height: 100vh;
     width: 100%;
     display: grid;
-    grid-template-rows: 11rem auto;
+    grid-template-rows: 10rem auto;
     grid-template-areas: 
     "Header"
     "content";
@@ -20,11 +20,11 @@ export const Form = styled.form`
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    width: min(120rem, 90%);
+    
     background: ${({theme}) => theme.colors.loginBgForm};
     padding: 6rem 4rem;
-    margin: 2rem auto;
-    border-radius: .8rem;
+    margin: 0 auto;
+    border-radius: .7rem .7rem 0 0 ;
     >h1 {
         font-size: 3.6rem;
         margin-bottom: 1.2rem;
@@ -60,4 +60,9 @@ export const Form = styled.form`
         margin-left: 2rem;
     }
     
+`
+
+export const MainContent = styled.div`
+    width: min(120rem, 90%);
+    margin: 3rem auto;
 `

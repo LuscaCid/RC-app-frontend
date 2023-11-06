@@ -4,9 +4,11 @@ export const Container = styled.div`
     width: 100%;
     height: 100vh;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: row-reverse;
     background: ${({theme}) => theme.colors.loginBg};
-    padding: 20rem 0;
+    
 
 `
 
@@ -45,7 +47,7 @@ export const Form = styled.form`
 export const StyledSide = styled.div`
     padding: 3rem;
     width: 80%;
-    border-radius:  0 .5rem .5rem 0;
+    border-radius: .5rem 0 0 .5rem ;
     background: linear-gradient(130deg ,rgb(0,0,0, 0.7), #E1AA1F);
     color: white;
     >.logo{

@@ -1,4 +1,4 @@
-import { Container, Form } from "./style";
+import { Container, Form, MainContent } from "./style";
 import { Header } from "../../components/header";
 import { Input } from "../../components/Input";
 import {FiSmartphone } from 'react-icons/fi'
@@ -14,8 +14,8 @@ export const New = ({user, ...rest}) => {
             username = {user}
             />
             <main>
-
-            <Form {...rest}>
+            <MainContent>
+                <Form {...rest}>
                     <h1>CADASTRO DE O.S. PARA: {user}</h1>
                     
                     <div className="flex">
@@ -76,10 +76,15 @@ export const New = ({user, ...rest}) => {
                     id = "info"
                     placeholder="Insira aqui as informações"
                     />
+               
+                </Form>
                 <Button 
+                isForm
                 span = "ORDEM DE SERVIÇO"
                 title= "GERAR" />
-                </Form>
+            </MainContent>
+           
+                 
             </main>
                 
             

@@ -4,7 +4,7 @@ import { FiPower } from 'react-icons/fi'
 export const LogoutButton = () => {
   const {signOut} = useAuth()
   return (
-    <Container onClick={signOut}>
+    <Container to='/' onClick={signOut}>
       {<FiPower size={40} color='white' />}
     </Container>
 

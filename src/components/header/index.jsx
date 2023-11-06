@@ -1,4 +1,4 @@
-import {Container} from './style'
+import {Container, LinkContainer} from './style'
 import imgLogo from '../../assets/photo1697480913-removebg-preview 1.png'
 
 import { ButtonText } from '../buttonText'
@@ -16,11 +16,11 @@ export function Header () {
     return (
         <Container  >
             
-            <div id='first-div'>
+            <LinkContainer to='/'>
+                <img src={imgLogo} alt="logo da empresa" />
+            </LinkContainer>
             
-            <img src={imgLogo} alt="logo da empresa" />
-                
-            </div>
+           
             <div>
                 
             <Profile /> 

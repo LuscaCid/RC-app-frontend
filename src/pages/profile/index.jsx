@@ -5,7 +5,10 @@ import {FiPower} from 'react-icons/fi'
 import { Link } from "react-router-dom";
 import { Button } from '../../components/button'
 import { LogoutButton } from "../../components/logoutButton";
+import { useAuth } from "../../hooks/auth";
+
 export const Profile = () => {
+    const {user, name} = useAuth()
     return (
         <Container>
             <header>
@@ -18,7 +21,7 @@ export const Profile = () => {
                 </Link>
             </header>
                 <div className="img">
-                    <img src="https://github.com/luscacid.png" alt="" />
+                    <img src={`https://github.com/${user}.png`} alt="" />
                 </div>
                 <input type="file"  />
             

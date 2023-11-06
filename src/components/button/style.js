@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 
 export const Container = styled.button`
-    background: #000;
+    background: ${({theme,isForm})=> isForm? theme.colors.buttonBg : '#000'} ;
     width: 100%;
-    padding: 1.2rem 0;
+    padding:${({isForm})=> isForm? '2.3rem' : '1.5rem'};
     color: ${({theme})=> theme.colors.wordBg};
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
-    border-radius: .7rem;
-    font-size: 1.6rem;
+    border-radius: ${({isForm})=> isForm ? '0 0 .7rem .7rem' : ".7rem;" };
+    font-size:${({isForm})=> isForm? '2.3rem' : '1.5rem'};
     font-weight: 700;
     gap: .5rem;
     >span{
@@ -19,6 +19,6 @@ export const Container = styled.button`
     cursor: pointer;
     transition: transform 0.5s;
     &:hover{
-        transform: translateY(-3px);
+        filter: brightness(1.1);
     }
 `

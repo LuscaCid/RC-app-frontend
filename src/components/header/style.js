@@ -1,9 +1,8 @@
 import styled from 'styled-components'
-
+import { Link } from 'react-router-dom'
 export const Container = styled.header`
     width: 100%;
-    padding: 0 2rem;
-    
+    padding: 0 3rem;
     background: ${({theme}) => theme.colors.background_900};
     display: flex;
     flex-direction: row;
@@ -12,13 +11,16 @@ export const Container = styled.header`
     color: white;
     >div{
         display: flex;
-        
+        align-items: center;
         >img{
-            width: 13rem;
-            margin-right: 4rem;
+            margin-right: 1rem;
         }
     }
+   
+`
 
-    
-        
+export const LinkContainer = styled(Link)`
+    img{   
+            width: 13rem;
+        }
 `

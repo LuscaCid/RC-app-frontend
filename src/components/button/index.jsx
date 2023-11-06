@@ -1,13 +1,18 @@
 import { Container } from "./style";
 
-export const Button = ({title, span}) => {
+export const Button = ({isForm ,title, span}) => {
     return (
-        <Container span={span}>
+        <Container 
+        isForm = {isForm} 
+        span={span}>
+
             {title}
             <span>
             {span}
             </span>
+
         </Container>
+
 
     )
 }
