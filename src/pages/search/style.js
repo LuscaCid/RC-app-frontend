@@ -6,9 +6,13 @@ export const Container = styled.div`
     display: grid;
     grid-template-rows: 
     10rem auto;
-    grid-template-areas: "header" "content";
+    grid-template-areas: "header" "main";
 
-    
+    >main {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
 `
 
 export const Form = styled.form`
@@ -26,4 +30,5 @@ export const Form = styled.form`
 export const MainContent = styled.div`
     width: min(90rem, 90%);
     margin: 3rem auto;
+    
 `

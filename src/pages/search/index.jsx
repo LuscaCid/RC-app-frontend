@@ -7,7 +7,9 @@ export const SearchClient = () => {
     return (
         <Container>
             <Header />
-            <MainContent>
+            <main>
+
+                <MainContent>
                 <Form>
                     <h1>Buscar cliente</h1>
                     <Input 
@@ -38,6 +40,9 @@ export const SearchClient = () => {
                 title="Buscar"
                 span="cliente" />
             </MainContent>
+            </main>
+            
+            
 
         </Container>
     )

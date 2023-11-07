@@ -5,7 +5,7 @@ const AuthContext = createContext({})
 function AuthProvider({children}){
   
   const [data , setData] = useState({})
- 
+  let [isVisible, setIsVisible] = useState(true)
   async function signIn({username, password}){
     
     try{
@@ -48,6 +48,8 @@ function AuthProvider({children}){
 
   return (
     <AuthContext.Provider value = {{
+      isVisible,
+      setIsVisible,
       signOut, 
       signIn,
       user : data.user}}>

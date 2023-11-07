@@ -3,8 +3,10 @@ import { ButtonText } from "../buttonText";
 import {useAuth} from '../../hooks/auth'
 export const SideNav = () => {
     const {test, otherTest } = useAuth()
+    let {isVisible} = useAuth()
     return (
-        <Container>
+        
+        <Container isVisible = {isVisible}>
             
             <ButtonText title = "Buscar cliente" src= "/search" />
             <ButtonText title = "Cadastrar cliente" src='/clientregister'/>
@@ -14,5 +16,7 @@ export const SideNav = () => {
             <ButtonText title = "Histórico de OS" functions= {test}/>
         </Container>
 
+     
+        
     )
 }
