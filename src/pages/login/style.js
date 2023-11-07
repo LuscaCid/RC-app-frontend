@@ -35,10 +35,11 @@ export const Form = styled.form`
     }
     >label{
         font-weight: 700;
-        font-size: 2.3rem;
+        font-size: 2.1rem;
     }
     >a{
-        font-size: 2rem;
+        font-size: 1.6rem;
+        font-weight: bold;
         color: #000;
         margin-bottom: .7rem;
     }

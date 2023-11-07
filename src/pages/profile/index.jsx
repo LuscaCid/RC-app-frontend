@@ -20,6 +20,7 @@ export const Profile = () => {
                 
                 </Link>
             </header>
+            
                 <div className="img">
                     <img src={`https://github.com/${user.name}.png`} alt="" />
                 </div>

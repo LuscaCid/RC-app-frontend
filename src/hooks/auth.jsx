@@ -5,7 +5,8 @@ const AuthContext = createContext({})
 function AuthProvider({children}){
   
   const [data , setData] = useState({})
-  let [isVisible, setIsVisible] = useState(true)
+  let [isVisible, setIsVisible] = useState(false)
+  
   async function signIn({username, password}){
     
     try{
@@ -14,7 +15,7 @@ function AuthProvider({children}){
 
       const { user, token } = res.data
       api.defaults.headers.authorization = `Bearer ${token}`
-      console.log(user)
+      console.log(user.name)
       localStorage.setItem('@Robertcapas:user', JSON.stringify(user))
       localStorage.setItem('@Robertcapas:token', token)
       
@@ -36,7 +37,7 @@ function AuthProvider({children}){
     const user = localStorage.getItem('@Robertcapas:user') 
     const token =  localStorage.getItem('@Robertcapas:token')
     if(token && user) {
-      console.log(token, user, 'tem')
+      
       setData({
         user : JSON.parse(user),
         token

@@ -12,9 +12,8 @@ export const ClientRegister = (props) =>{
 
     async function SearchCep(e){
         e.preventDefault()
-        const endPoint = `https://viacep.com.br/ws/${cep}/json/`
-        const data = await fetch(endPoint)
-       
+        const endPoint = `https://brasilapi.com.br/api/cep/v1/${cep}`
+        const  data = await fetch(endPoint).then(data => data.json())
         console.log(data)
         console.log(cep)
     }

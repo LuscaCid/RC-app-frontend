@@ -5,14 +5,22 @@ export const Container = styled(Link)`
     &:hover{
        filter: brightness(.7) 
     }
+    border-radius: .4rem;
+    width: 90%;
     display: flex;
     flex-direction: row;
     align-items: center;
     background: transparent;
     color: ${({theme}) => theme.colors.buttonTextBg};
-    text-decoration: underline;
+    text-decoration: none;
     cursor: pointer;
     font-size: 1.6rem;
-    padding: 1rem 3.5rem;
+    padding: 1rem 2.5rem;
+    
+    font-size: 1.5rem;
     color: ${({theme, isActive}) => isActive? theme.colors.buttonTextBg : "#fff"};
+    &:hover{
+        background: #1e2251;
+        color: white;
+    }
 `
