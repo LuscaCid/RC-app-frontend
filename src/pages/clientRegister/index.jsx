@@ -6,8 +6,18 @@ import {Button} from '../../components/button'
 import {FiUser, FiMail, FiPhone } from 'react-icons/fi'
 import {HiOutlineIdentification} from 'react-icons/hi2'
 import {FaStreetView} from 'react-icons/fa'
+import { useState } from "react";
 export const ClientRegister = (props) =>{
+    const [cep, setCep] = useState('')
 
+    async function SearchCep(e){
+        e.preventDefault()
+        const endPoint = `https://viacep.com.br/ws/${cep}/json/`
+        const data = await fetch(endPoint)
+       
+        console.log(data)
+        console.log(cep)
+    }
     return (
         <Container>
             <Header />
@@ -25,8 +35,16 @@ export const ClientRegister = (props) =>{
                     placeholder="CPF"
                     type ="text"
                     icon={HiOutlineIdentification}/>
+                   
                     <Input
                     placeholder="Bairro"
+                    type ="text"
+                    icon={FaStreetView}/>
+                    <Input
+                    onChange= {e=> {
+                        setCep(e.target.value)    
+                    }}
+                    placeholder="CEP"
                     type ="text"
                     icon={FaStreetView}/>
                 </div>    
@@ -35,14 +53,20 @@ export const ClientRegister = (props) =>{
                     placeholder="Telefone"
                     type ="number"
                     icon={FiPhone}/>
-                    <Input
-                    placeholder="E-mail"
-                    type ="text"
-                    icon={FiMail}/>
+                    
                     <Input
                     placeholder="Endereço"
                     type ="text"
                     icon={FaStreetView}/>
+                    <Input
+                    placeholder="Cidade"
+                    type ="text"
+                    icon={FaStreetView}/>
+                    <Button 
+                    functions={SearchCep}
+                    title='Pesquisar' 
+                    span='CEP'
+                    />
                 </div>
 
                 </div>

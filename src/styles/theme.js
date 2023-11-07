@@ -7,7 +7,7 @@ export default {
         "background_100" : "#D9D9D9",
         "background_900" : "#0A1221",
 
-        "buttonBg" : "#243135",
+        "buttonBg" : "#222235",
 
         "buttonTextBg" : "#E1AA1F",
 

@@ -7,11 +7,17 @@ export const Container = styled(Link)`
     flex-direction: row-reverse;
     gap: .3rem;
     align-items: center;
-    margin-right: 3rem;
-    >span {
+    margin-right: 6rem;
+    .texts{
+        >p{
+            color: ${({theme}) => theme.colors.buttonTextBg};
+            font-size: 1.6rem;
+        }
+        >span {
         font-size: 2.1rem;
         color: #fff;
         font-weight: 700;
+    }
     }
     >img {
         margin-right: 1rem;

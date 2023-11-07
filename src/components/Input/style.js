@@ -13,10 +13,11 @@ export const Container = styled.div`
         border-radius: 0.6rem;
         border: none;
         background: transparent;
+        
     }
     >svg{
         position: absolute;
         left: 1rem;
-        top: .9rem
+        top: 1.1rem ; 
     }
 `

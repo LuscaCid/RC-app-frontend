@@ -11,22 +11,22 @@ export const SearchClient = () => {
                 <Form>
                     <h1>Buscar cliente</h1>
                     <Input 
-                    placeholder=''
+                    placeholder='Nome...'
                     type='text'
                     icon={FiUser}
                     />
                     <Input 
-                    placeholder=''
+                    placeholder='CPF...'
                     type='text'
                     icon={FiUser}
                     />
                     <Input 
-                    placeholder=''
+                    placeholder='Código de identificador...'
                     type='text'
                     icon={FiUser}
                     />
                     <Input 
-                    placeholder=''
+                    placeholder='Código de ordem de serviço...'
                     type='text'
                     icon={FiUser}
                     />
