@@ -9,9 +9,9 @@ import {HiOutlineIdentification} from 'react-icons/hi2'
 import {FaStreetView} from 'react-icons/fa'
 import { useEffect, useState } from "react";
 import { api } from "../../services/api";
-import { Link } from "react-router-dom";
-export const ClientRegister = (props) =>{
-    
+import { useNavigate } from "react-router-dom";
+export const ClientRegister = () =>{
+    const navigate = useNavigate()
     //automacao do preenchimento do endereco na aplicacao
     const [data , setData] = useState('') 
 
@@ -37,8 +37,14 @@ export const ClientRegister = (props) =>{
             street : valueOfInputStreet,
             neighborhood : valueOfInputNeigh
         })
-        .then(()=> alert(`Cliente ${name} cadastrado no sistema`))
-        .catch(e => console.log(e))
+        .then(()=> {
+            alert(`Cliente ${name} cadastrado no sistema`)
+            navigate('/new')
+        })
+        .catch(e => {
+            if(e.response)return alert(e.response.data.message)
+            alert('Não foi possivel cadastrar o cliente')
+        })
         console.log(response)
 
     }
@@ -125,12 +131,14 @@ export const ClientRegister = (props) =>{
                 placeholder='Observações... (opcional)'/>
                     
             </Form>
-           
-                <Button
-                functions  ={registerButton} 
-                isForm 
-                title ="Cadastrar"/>
+            
+            <Button
+            functions  ={registerButton} 
+            isForm 
+            title ="Cadastrar"/>
 
+            
+            
             
             
             </MainContent>
