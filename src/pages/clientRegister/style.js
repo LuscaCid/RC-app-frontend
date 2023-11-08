@@ -8,7 +8,7 @@ export const Container = styled.div`
    
     grid-template-areas: 
     "Header"
-    "sidenav"
+    
     "content";
     position: relative;
     >:nth-child(2){
@@ -38,7 +38,7 @@ export const Form = styled.form`
     }
     background: ${({theme}) => theme.colors.loginBgForm};
     border-radius: 0.7rem .7rem 0 0;
-    padding: 4rem 2rem;
+    padding: 5rem 3rem;
     >h1{
         border-bottom: 1px solid ${({theme}) => theme.colors.background_900};
         padding-bottom: 1rem;

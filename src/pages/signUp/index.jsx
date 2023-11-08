@@ -29,7 +29,7 @@ export const SignUp = ()=>{
             navigate('/')
         })
         .catch(error => {
-            if(error.response)alert(error.message)
+            if(error.response)alert(error.response.data.message)
             else alert('não foi possivel cadastrar')
         })   
     }  

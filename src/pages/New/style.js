@@ -29,7 +29,7 @@ export const Form = styled.form`
     gap: 1.5rem;
     
     background: ${({theme}) => theme.colors.loginBgForm};
-    padding: 6rem 4rem;
+    padding: 5rem 3rem;
     margin: 0 auto;
     border-radius: .7rem .7rem 0 0 ;
     >h1 {
