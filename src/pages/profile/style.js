@@ -19,8 +19,9 @@ export const Container = styled.div`
         
         } 
     >header{
-        padding: 2.5rem 5rem;
-        box-shadow: 0 1rem 2rem -1rem rgb(0,0,0, 0.7);
+        height: 10rem;
+        padding: 0 5rem;
+        box-shadow: 0 1rem 2rem -1rem rgb(0,0,0, 0.48);
         background: ${({theme}) => theme.colors.background_900};
         width: 100%;
         display: flex;

@@ -1,4 +1,5 @@
 import { Container, Form, MainContent } from "./style";
+import { SideNav } from "../../components/sideNavMenu";
 import { Header} from '../../components/header'
 import { Button } from "../../components/button";
 import { Input } from "../../components/Input";
@@ -7,6 +8,7 @@ export const SearchClient = () => {
     return (
         <Container>
             <Header />
+            < SideNav />
             <main>
 
                 <MainContent>

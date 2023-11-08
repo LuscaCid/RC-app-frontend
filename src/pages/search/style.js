@@ -7,7 +7,13 @@ export const Container = styled.div`
     grid-template-rows: 
     10rem auto;
     grid-template-areas: "header" "main";
-
+    position: relative;
+    >:nth-child(2){
+        position: absolute;
+        top: 10rem;
+        height: calc(100vh - 10rem);
+        z-index: 999;
+    }
     >main {
         width: 100%;
         height: 100%;

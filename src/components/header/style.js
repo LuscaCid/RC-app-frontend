@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 export const Container = styled.header`
-    box-shadow: 0 1rem 2rem -1rem rgb(0,0,0, 0.4);
+    box-shadow: 0 1rem 2rem -1rem rgb(0,0,0, 0.48);
     width: 100%;
-    padding: 0 3rem;
+    padding: 0 5rem;
     background: ${({theme}) => theme.colors.background_900};
     display: flex;
     flex-direction: row;
