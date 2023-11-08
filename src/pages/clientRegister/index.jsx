@@ -6,17 +6,32 @@ import {Button} from '../../components/button'
 import {FiUser, FiMail, FiPhone } from 'react-icons/fi'
 import {HiOutlineIdentification} from 'react-icons/hi2'
 import {FaStreetView} from 'react-icons/fa'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 export const ClientRegister = (props) =>{
+    
+    //automacao do preenchimento do endereco na aplicacao
     const [cep, setCep] = useState('')
+    const [data , setData] = useState('')
+    const [valueOfInputCity, setCity] = useState('')
+    const [valueOfInputNeigh, setNeigh] = useState('')
+    const [valueOfInputStreet, setStreet] = useState('')
 
     async function SearchCep(e){
         e.preventDefault()
         const endPoint = `https://brasilapi.com.br/api/cep/v1/${cep}`
-        const  data = await fetch(endPoint).then(data => data.json())
-        console.log(data)
-        console.log(cep)
+        const response = await fetch(endPoint).then(data => data.json())
+        console.log(response)
+        setData(response)
+        setCity(response.city)
+        setNeigh(response.neighborhood)
+        setStreet(response.street)
+        console.log(valueOfInputCity)
     }
+    useEffect(()=> {
+        document.getElementById('city').value = valueOfInputCity
+        document.getElementById('street').value = valueOfInputStreet
+        document.getElementById('neigh').value = valueOfInputNeigh
+    }, [data])
     return (
         <Container>
             <Header />
@@ -36,6 +51,7 @@ export const ClientRegister = (props) =>{
                     icon={HiOutlineIdentification}/>
                    
                     <Input
+                    id = "neigh"
                     placeholder="Bairro"
                     type ="text"
                     icon={FaStreetView}/>
@@ -54,10 +70,12 @@ export const ClientRegister = (props) =>{
                     icon={FiPhone}/>
                     
                     <Input
+                    id = "street"
                     placeholder="Endereço"
                     type ="text"
                     icon={FaStreetView}/>
                     <Input
+                    id = "city"
                     placeholder="Cidade"
                     type ="text"
                     icon={FaStreetView}/>
