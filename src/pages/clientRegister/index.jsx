@@ -9,6 +9,7 @@ import {HiOutlineIdentification} from 'react-icons/hi2'
 import {FaStreetView} from 'react-icons/fa'
 import { useEffect, useState } from "react";
 import { api } from "../../services/api";
+import { Link } from "react-router-dom";
 export const ClientRegister = (props) =>{
     
     //automacao do preenchimento do endereco na aplicacao
@@ -26,7 +27,7 @@ export const ClientRegister = (props) =>{
 
     async function registerButton(e) {
         e.preventDefault()
-        const data = await api.post('/client/register', { 
+        const response = await api.post('/client/register', { 
             cep,
             name,
             cpf,
@@ -35,8 +36,10 @@ export const ClientRegister = (props) =>{
             city : valueOfInputCity,
             street : valueOfInputStreet,
             neighborhood : valueOfInputNeigh
-        }).then(()=> console.log('created')).catch(e => console.log(e))
-        console.log(data)
+        })
+        .then(()=> alert(`Cliente ${name} cadastrado no sistema`))
+        .catch(e => console.log(e))
+        console.log(response)
 
     }
 
@@ -122,12 +125,14 @@ export const ClientRegister = (props) =>{
                 placeholder='Observações... (opcional)'/>
                     
             </Form>
-            <Button
-            src
-            functions  ={registerButton} 
-            isForm 
-            title ="Cadastrar"/>
+           
+                <Button
+                functions  ={registerButton} 
+                isForm 
+                title ="Cadastrar"/>
 
+            
+            
             </MainContent>
             </main>
            
