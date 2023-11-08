@@ -35,8 +35,8 @@ export const ClientRegister = (props) =>{
             city : valueOfInputCity,
             street : valueOfInputStreet,
             neighborhood : valueOfInputNeigh
-        })
-        console.log()
+        }).then(()=> console.log('created')).catch(e => console.log(e))
+        console.log(data)
 
     }
 
@@ -79,7 +79,7 @@ export const ClientRegister = (props) =>{
                     icon={HiOutlineIdentification}/>
                    
                     <Input
-                    onChange = {(e)=> {setNeighborhood(e.target.value)}}
+                    onChange = {(e)=> {setNeigh(e.target.value)}}
                     id = "neigh"
                     placeholder="Bairro"
                     type ="text"
@@ -123,7 +123,8 @@ export const ClientRegister = (props) =>{
                     
             </Form>
             <Button
-            onClick ={ registerButton} 
+            src
+            functions  ={registerButton} 
             isForm 
             title ="Cadastrar"/>
 
