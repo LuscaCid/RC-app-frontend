@@ -6,17 +6,16 @@ import {AiOutlineBarcode } from 'react-icons/ai'
 import {BsFillCalendar2DateFill } from 'react-icons/bs'
 import { Textarea } from "../../components/textarea";
 import {Button} from '../../components/button'
-export const New = ({user, ...rest}) => {
+import { SideNav } from "../../components/sideNavMenu";
+export const New = () => {
     return (
         <Container>
-            <Header 
-            src = {`https://github.com/${user}.png` }
-            username = {user}
-            />
+            <Header />
+            <SideNav />
             <main>
             <MainContent>
-                <Form {...rest}>
-                    <h1>CADASTRO DE O.S. PARA: {user}</h1>
+                <Form >
+                    <h1>CADASTRO DE O.S. PARA:</h1>
                     
                     <div className="flex">
                     <section>

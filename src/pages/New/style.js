@@ -13,6 +13,13 @@ export const Container = styled.div`
     grid-area: content;
     overflow-y: auto;
     }
+    position: relative;
+    >:nth-child(2){
+        position: absolute;
+        top: 10rem;
+        height: calc(100vh - 10rem);
+        z-index: 2;
+    }
 `
 
 export const Form = styled.form`

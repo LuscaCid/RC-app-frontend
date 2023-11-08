@@ -2,15 +2,13 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const Container = styled(Link)`
-    &:hover{
-       filter: brightness(.7) 
-    }
+    
     border-radius: .4rem;
     width: 90%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    background: transparent;
+    background: none;
     color: ${({theme}) => theme.colors.buttonTextBg};
     text-decoration: none;
     cursor: pointer;

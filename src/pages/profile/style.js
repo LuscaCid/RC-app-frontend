@@ -13,7 +13,7 @@ export const Container = styled.div`
     width: 100%;
     height: 100vh;
     img {
-        margin-top: -8rem;
+        margin-top: -7rem;
         border-radius: 50%;
         width: 13rem;
         
@@ -30,13 +30,17 @@ export const Container = styled.div`
 `
 export const Form = styled.form`
     width: 40rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     background: ${({theme}) => theme.colors.loginBgForm};
-    padding: 4rem 3rem;
+    padding: 3rem 2.4rem;
     border-radius: 1.4rem;
     align-items: flex-start;
+    
+    
     h1{
         font-size: 3.2rem;
     }
-    
+    >:nth-child(3){
+        margin-bottom: 2.3rem;
+    }
 `

@@ -3,6 +3,7 @@ import {Input} from '../../components/Input'
 import {Textarea} from '../../components/textarea'
 import {Header} from '../../components/header'
 import {Button} from '../../components/button'
+import { SideNav } from "../../components/sideNavMenu";
 import {FiUser, FiMail, FiPhone } from 'react-icons/fi'
 import {HiOutlineIdentification} from 'react-icons/hi2'
 import {FaStreetView} from 'react-icons/fa'
@@ -35,6 +36,7 @@ export const ClientRegister = (props) =>{
     return (
         <Container>
             <Header />
+            <SideNav/>  
             <main>
                  <MainContent>
             <Form>

@@ -4,10 +4,19 @@ export const Container = styled.div`
     height: 100vh;
     width: 100%;
     display: grid;
-    grid-template-rows: 10rem auto;
+    grid-template-rows: 10rem  auto;
+   
     grid-template-areas: 
     "Header"
+    "sidenav"
     "content";
+    position: relative;
+    >:nth-child(2){
+        position: absolute;
+        top: 10rem;
+        height: calc(100vh - 10rem);
+        z-index: 2;
+    }
     >main{
         display: grid;
         grid-area: content;
