@@ -8,9 +8,18 @@ export const Container = styled.div`
     "main"
     
     ;
+
     width: 100%;
     height: 100vh;
-    
+    position: relative;
+    .timing {
+        position: absolute;
+        right: 12rem;
+        top: 12rem;
+        .clock{
+            font-size: 2.2rem;
+        }
+    }
     >img { 
         position: absolute;
         top: 20rem;
@@ -19,4 +28,6 @@ export const Container = styled.div`
         margin: 0 auto;
      
     }
+`
+export const Calendar = styled.div`
 `
