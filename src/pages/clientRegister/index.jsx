@@ -138,10 +138,6 @@ export const ClientRegister = () =>{
             functions  ={registerButton} 
             isForm 
             title ="Cadastrar"/>
-
-            
-            
-            
             
             </MainContent>
             </main>

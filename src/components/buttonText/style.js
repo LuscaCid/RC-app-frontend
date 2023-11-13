@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const Container = styled(Link)`
     
     border-radius: .4rem;
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -13,8 +13,8 @@ export const Container = styled(Link)`
     text-decoration: none;
     cursor: pointer;
     font-size: 1.6rem;
-    padding: 1rem 2.5rem;
-    
+    padding: 1rem 2.4rem;
+    margin: 0 auto;
     font-size: 1.5rem;
     color: ${({theme, isActive}) => isActive? theme.colors.buttonTextBg : "#fff"};
     &:hover{
