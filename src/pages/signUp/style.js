@@ -7,7 +7,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: row-reverse;
-    background: ${({theme}) => theme.colors.loginBg};
+    background: ${({theme}) => theme.colors.background_100};
     
 
 `
