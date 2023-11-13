@@ -26,6 +26,12 @@ height: 100vh;
     }
 `
 export const DetailsContainer = styled.div`
+
+.hide{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
     width: 100%;
     .button{
         margin-top: 2rem;
