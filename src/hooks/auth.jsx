@@ -7,11 +7,11 @@ function AuthProvider({children}){
   const [data , setData] = useState({})
   let [isVisible, setIsVisible] = useState(false)
   
-  async function signIn({username, password}){
+  async function signIn({email, password}){
     
     try{
       
-      const res = await api.post('/sessions', {username , password })
+      const res = await api.post('/sessions', {email , password })
 
       const { user, token } = res.data
       api.defaults.headers.authorization = `Bearer ${token}`
@@ -24,6 +24,7 @@ function AuthProvider({children}){
     } catch (error) {
       if(error.response) alert(error.response.data.message)
       else alert('não foi possivel fazer login')
+      console.log(error.response.data.message)
     }
   }
   

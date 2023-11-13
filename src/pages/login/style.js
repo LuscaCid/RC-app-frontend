@@ -5,7 +5,7 @@ export const Container = styled.div`
     width: 100%;
     height: 100vh;
     
-    background: ${({theme}) => theme.colors.loginBg};
+    background: ${({theme}) => theme.colors.background_100};
 
     display: flex;
     align-items: center;

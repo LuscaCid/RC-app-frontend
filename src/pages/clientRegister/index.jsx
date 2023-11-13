@@ -27,6 +27,8 @@ export const ClientRegister = () =>{
 
     async function registerButton(e) {
         e.preventDefault()
+        
+        
         const response = await api.post('/client/register', { 
             cep,
             name,

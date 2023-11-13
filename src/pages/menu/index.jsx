@@ -98,12 +98,7 @@ export const Menu = ()=>{
         <SideNav/>
         <img src={logoImg} alt="logo da empresa" />
         <div className="timing">
-            <div className="clock">
-                <span>{hours}</span>
-                <span>:</span>
-                <span>{displayMins}</span>
-
-            </div>
+            
             <Calendar>
                 <span>{nomDay.weekDay}. </span> 
                 <span>{tempo.day}</span>
@@ -112,6 +107,12 @@ export const Menu = ()=>{
                 <span>de</span>
                 <span>{tempo.year}</span>
             </Calendar>
+            <div className="clock">
+                <span>{hours}</span>
+                <span>:</span>
+                <span>{displayMins}</span>
+
+            </div>
         </div>
     </Container>
 

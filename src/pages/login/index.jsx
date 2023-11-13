@@ -10,15 +10,15 @@ import { useAuth } from '../../hooks/auth'
 import { useState } from 'react'
 
 export const Login = ()=>{
-    const [username, setUsername] = useState('')
+    const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
 
-    const {user, signIn} = useAuth()
+    const { signIn } = useAuth()
     function handleSignIn(e){
         e.preventDefault()
-        
-        signIn({username, password})
+        if(!email || !password) return alert('preencha todos os campos')
+        signIn({email, password})
     }
     return (
         <main>
@@ -28,11 +28,11 @@ export const Login = ()=>{
                 <Form>
                     <h1>Faça login</h1>
 
-                    <label htmlFor="user">Nome de usuário</label>
+                    <label htmlFor="user">E-mail do usuário</label>
                     <Input 
-                    onChange = {(e)=> {setUsername( e.target.value)}}
+                    onChange = {(e)=> {setEmail( e.target.value)}}
                     icon= {FiUser} 
-                    placeholder= 'Usuário' id="user" 
+                    placeholder= 'E-mail' id="user" 
                     type="text"
                     />
 

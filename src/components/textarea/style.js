@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.textarea`
     resize: none;
-    background: ${({theme}) => theme.colors.background_100};
+    background: #fff;
     border-radius: .7rem ;
     width: 100%;
     font-size: 1.6rem;

@@ -15,9 +15,9 @@ export const Container = styled.div`
     .timing {
         align-items: baseline;
         display: flex;
-        
+        color: #fff;
         position: absolute;
-        right: 7rem;
+        right: 6rem;
         top: 12rem;
         gap: 2rem;
         .clock{
