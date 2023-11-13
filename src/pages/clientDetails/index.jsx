@@ -94,10 +94,9 @@ export function ClientDetails(){
                             <h1>Observações feitas:</h1>
                            {observacoes.map(element => {
                                 return <>
-                                    <p>{element.created_at}</p>
+                                    <p>Data de criação: {element.created_at}</p>
                                     <Textarea value={element.obs} readOnly />
                                 </>
-
                            })}
                         </div>
                     </div>

@@ -33,7 +33,7 @@ overflow-y: auto;
     visibility: hidden;
     opacity: 0;
 }
-    
+   
     width: 100%;
     .button{
         margin-top: 2rem;
@@ -87,8 +87,10 @@ overflow-y: auto;
                 margin-bottom: 1.2rem;
                 border-bottom: 1px solid ${({theme}) => theme.colors.background_900};
             }
-
-            
+            >p{
+                font-size: 1.4rem;
+            }
+        
         }
     }
     
