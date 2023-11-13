@@ -15,26 +15,20 @@ function DataProvider({children}){
             created_at : "19/18",
             OSs_id : 3
         },
-        {
-            phoneModel : "xiaomi",
-            created_at : "19/18",
-            OSs_id : 3
-        },
-        {
-            phoneModel : "xiaomi",
-            created_at : "19/18",
-            OSs_id : 3
-        },
-        {
-            phoneModel : "xiaomi",
-            created_at : "19/18",
-            OSs_id : 3
-        },
+        
     ])//um objeto sera passado aqui dentro e sera renderizdo
-
+    const [observacoes, setObservacoes] = useState([
+        {
+            obs : "lucas eh muito malucaooo",
+            created_at : "18/11/2023"
+        }
+    ])
     //requisicoes serao feitas aqui
     return(
-        <dataContext.Provider value = {{OSs}}>
+        <dataContext.Provider value = {{
+            OSs,
+            observacoes
+            }}>
             {children}
         </dataContext.Provider>
     )

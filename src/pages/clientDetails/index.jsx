@@ -8,7 +8,7 @@ import { DisplayOS } from '../../components/displayOS'
 import { useData } from "../../hooks/data";
 
 export function ClientDetails(){
-    const {OSs} =useData()
+    const {OSs , observacoes} =useData()
     
     function handleDetails(e){
         e.preventDefault()
@@ -91,11 +91,14 @@ export function ClientDetails(){
 
                     <div className="observacoes hide">
                         <div className="obs">
-                            <h1>Observações do cliente</h1>
-                            <Textarea value="lucas" readOnly/>
-                            <Textarea value="lucas" readOnly/>
-                            <Textarea value="lucas" readOnly/>
+                            <h1>Observações feitas:</h1>
+                           {observacoes.map(element => {
+                                return <>
+                                    <p>{element.created_at}</p>
+                                    <Textarea value={element.obs} readOnly />
+                                </>
 
+                           })}
                         </div>
                     </div>
                     

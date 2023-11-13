@@ -24,7 +24,10 @@ export const Container = styled.div`
     }
 `
 export const DetailsContainer = styled.div`
-
+height: 60rem;
+display: grid;
+grid-area: "conteudo";
+overflow-y: auto;
 .hide{
     display: none;
     visibility: hidden;
