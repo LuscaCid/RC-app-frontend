@@ -4,9 +4,22 @@ import { SideNav } from "../../components/sideNavMenu";
 import { Textarea } from "../../components/textarea";
 import { Button } from "../../components/button";
 import { ButtonText } from "../../components/buttonText";
+import { DisplayOS } from '../../components/displayOS'
+
 
 export function ClientDetails(){
-
+    const Oss = [
+        {
+            model : "xiaomi redmi note 10",
+            realease : "18/11/2023",
+            OS_id : 3
+        },
+        {
+            model : "iphone 15 max",
+            realease : "18/11/2022",
+            OS_id : 2
+        }
+    ]
     return(
         <Container>
             <Header />
@@ -22,7 +35,7 @@ export function ClientDetails(){
                         </ul>
                     </nav>
                 <DetailsContainer>
-                    <div className="detalhes hide ">
+                    <div className="detalhes  ">
                         <div className="Details ">
                             <h1>Detalhes do registro</h1>
                                 
@@ -49,9 +62,16 @@ export function ClientDetails(){
                             </div>
                         </div>
                     </div>
-                    <div className="registros">
+                    <div className="registros hide">
                         <div className="registers">
-                            
+                            <h1>Registros de ordens de serviço</h1>
+                                {Oss.map(element => {
+                                    return <DisplayOS 
+                                    phoneModel={element.model}
+                                    releaseDate={element.realease}
+                                    OS_id={element.OS_id}
+                                    />
+                                })}   
                         </div>
                     </div>
                     

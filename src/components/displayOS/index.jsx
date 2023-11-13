@@ -1,10 +1,23 @@
 import { Container } from "./style";
-
-export function DisplayOS(){
+import {FiX, FiEdit} from 'react-icons/fi'
+export function DisplayOS({phoneModel, releaseDate, OS_id}){
+    function handleClick(){
+        console.log(phoneModel, releaseDate, OS_id)
+    }
     return (
-        <Container>
-            <h2>modelo do celular</h2>
-            <p>18/11/2023</p>
+        <Container
+        onClick={handleClick}
+        >
+            <div className="info">
+                <h2>{phoneModel}</h2>
+                <p>data de criação: {releaseDate}</p>
+            </div>
+            
+            <div className="buttons">
+                <button className="edit">{<FiEdit />}</button>
+                <button className="remove">{<FiX/>}</button>
+            </div>
+            
         </Container>
     )
 

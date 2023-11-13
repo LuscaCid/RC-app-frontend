@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
 
-height: 100vh;
     width: 100%;
     display: grid;
     grid-template-rows: 10rem  auto;
@@ -46,17 +45,33 @@ export const DetailsContainer = styled.div`
         }
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         gap: .4rem;
             
         >label{
             font-size: 1.6rem;
         }
         >input{
-            border: 1px solid ${({theme}) => theme.colors.background_100} ;
+            border: 1px dashed ${({theme}) => theme.colors.background_100} ;
             background: transparent;
-            padding: .4rem 1.2rem;
+            padding: .8rem 1.6rem;
             border-radius: .7rem;
             width: 50%;
+            font-size: 1.5rem;
+        }
+    }
+    .registros{
+        .registers{
+            h1{
+                font-size: 2.8rem;
+                padding-bottom: .7rem;
+                margin-bottom: 1.2rem;
+                border-bottom: 1px solid ${({theme}) => theme.colors.background_900};
+            }
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            
         }
     }
     

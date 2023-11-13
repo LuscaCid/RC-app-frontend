@@ -20,5 +20,7 @@ export const Container = styled.button`
     transition: transform 0.5s;
     &:hover{
         filter: brightness(1.1);
+        transform: translateY(${({isForm})=>isForm ? 0 : '-5px'});
     }
+    
 `
