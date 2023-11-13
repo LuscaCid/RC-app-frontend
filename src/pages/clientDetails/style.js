@@ -1,14 +1,13 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-
+    height: 100vh;
     width: 100%;
     display: grid;
     grid-template-rows: 10rem  auto;
-   
+
     grid-template-areas: 
     "Header"
-    
     "content";
     position: relative;
     >:nth-child(2){
@@ -31,6 +30,7 @@ export const DetailsContainer = styled.div`
     visibility: hidden;
     opacity: 0;
 }
+    
     width: 100%;
     .button{
         margin-top: 2rem;
@@ -68,9 +68,23 @@ export const DetailsContainer = styled.div`
                 margin-bottom: 1.2rem;
                 border-bottom: 1px solid ${({theme}) => theme.colors.background_900};
             }
+            
             display: flex;
             flex-direction: column;
             gap: 1rem;
+            
+        }
+    }
+
+    .observacoes{
+        .obs{
+            h1{
+                font-size: 2.8rem;
+                padding-bottom: .7rem;
+                margin-bottom: 1.2rem;
+                border-bottom: 1px solid ${({theme}) => theme.colors.background_900};
+            }
+
             
         }
     }
@@ -78,6 +92,7 @@ export const DetailsContainer = styled.div`
 `
 
 export const MainContent = styled.div`
+    height: fit-content;
     border-radius: 0.7rem;
     width: min(90rem, 90%);
     margin: 3rem auto;

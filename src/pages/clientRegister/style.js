@@ -8,7 +8,6 @@ export const Container = styled.div`
    
     grid-template-areas: 
     "Header"
-    
     "content";
     position: relative;
     >:nth-child(2){

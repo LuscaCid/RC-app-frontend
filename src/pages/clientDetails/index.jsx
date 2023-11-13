@@ -5,21 +5,30 @@ import { Textarea } from "../../components/textarea";
 import { Button } from "../../components/button";
 import { ButtonText } from "../../components/buttonText";
 import { DisplayOS } from '../../components/displayOS'
-
+import { useData } from "../../hooks/data";
 
 export function ClientDetails(){
-    const Oss = [
-        {
-            model : "xiaomi redmi note 10",
-            realease : "18/11/2023",
-            OS_id : 3
-        },
-        {
-            model : "iphone 15 max",
-            realease : "18/11/2022",
-            OS_id : 2
-        }
-    ]
+    const {OSs} =useData()
+    
+    function handleDetails(e){
+        e.preventDefault()
+        document.querySelector('.detalhes').classList.remove('hide')
+        document.querySelector('.registros').classList.add('hide')
+        document.querySelector('.observacoes').classList.add('hide')
+    }
+    function handleRegisters(e){
+        e.preventDefault()
+        document.querySelector('.detalhes').classList.add('hide')
+        document.querySelector('.registros').classList.remove('hide')
+        document.querySelector('.observacoes').classList.add('hide')
+    }
+
+    function handleObservations(e){
+        e.preventDefault()
+        document.querySelector('.detalhes').classList.add('hide')
+        document.querySelector('.registros').classList.add('hide')
+        document.querySelector('.observacoes').classList.remove('hide')
+    }
     return(
         <Container>
             <Header />
@@ -29,9 +38,14 @@ export function ClientDetails(){
                 <MainContent>
                     <nav>
                         <ul>
-                         <ButtonText title= "Detalhes" />   
-                         <ButtonText title= "Registros" />   
-                         <ButtonText title= "Observações" />   
+                         
+                         <ButtonText title= "Detalhes"
+                         functions={handleDetails}/>
+
+                         <ButtonText title= "Registros"
+                         functions={handleRegisters} />   
+                         <ButtonText title= "Observações"
+                         functions={handleObservations} />   
                         </ul>
                     </nav>
                 <DetailsContainer>
@@ -62,16 +76,26 @@ export function ClientDetails(){
                             </div>
                         </div>
                     </div>
-                    <div className="registros hide">
+                    <div className="registros hide ">
                         <div className="registers">
                             <h1>Registros de ordens de serviço</h1>
-                                {Oss.map(element => {
+                                {OSs.map(element => {
                                     return <DisplayOS 
-                                    phoneModel={element.model}
-                                    releaseDate={element.realease}
-                                    OS_id={element.OS_id}
+                                    phoneModel={element.phoneModel}
+                                    releaseDate={element.created_at}
+                                    OS_id={element.OSs_id}
                                     />
                                 })}   
+                        </div>
+                    </div>
+
+                    <div className="observacoes hide">
+                        <div className="obs">
+                            <h1>Observações do cliente</h1>
+                            <Textarea value="lucas" readOnly/>
+                            <Textarea value="lucas" readOnly/>
+                            <Textarea value="lucas" readOnly/>
+
                         </div>
                     </div>
                     
